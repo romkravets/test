@@ -1,0 +1,46 @@
+@import "vars";
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+   .global-nav {
+      &__item {
+         padding-right: 1rem;
+      }
+      &__link {
+         font-size: 0.7rem;
+      }
+   }
+   .button {
+      &__menu {
+         padding: 15px 35px;
+         font-size: 0.7rem;
+      }
+   }
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+   .section {
+      &__image-container {
+         &_space {
+            margin: 20px 0;
+         }
+      }
+   }
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+   .footer {
+      &__copyright {
+         text-align: center;
+      }
+   }
+}

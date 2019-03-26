@@ -1,0 +1,369 @@
+
+@import "vars";
+@import "fonts";
+@import "libs";
+
+
+/*---------------
+   BASE
+---------------*/
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+	height: 100%;
+}
+
+html, body {
+	 height: 100%;
+}
+
+ body {
+	position: relative;
+	min-height: 100vh;
+	min-width: 320px;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	font-family: $default-font;
+	line-height: 1.36;
+	color: $base-font-color;
+}
+
+.page-wrapper {
+	max-width: 1640px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+		color: $base-font-color;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+/*---------------
+    HEADER
+---------------*/
+.global-nav {
+	background-image: url(../img/header/group.png);
+	background-repeat: no-repeat;
+	// background-position: center;
+	background-size: cover;
+	min-height: 688px;
+	width: 100%;
+    &__items {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		padding-top: 1.8rem;
+		padding-bottom: 1.5rem;
+	}
+	&__item {
+		text-transform: uppercase;
+		white-space: nowrap;
+		padding-right: 2rem;
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+    &__link {
+		color: $accent-color;
+		&:hover {
+			color: $button-yellow;
+		}
+    }
+}
+
+.logo-container {
+	&__image {
+		max-width: 100%;
+		height: 56px;
+	}
+}
+
+/*   Buttons   */
+.button {
+		border-radius: 4px;
+		background-color: $button-yellow;
+		padding: 20px 47px;
+		font-size: 1rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 2px;
+		color: $base-font-color;
+		text-align: center;
+		cursor: pointer;
+		white-space: nowrap;
+		border: none;
+	&__menu {
+		-webkit-box-shadow: 0 0 20px 0 rgba(254, 203, 1, 0.4);
+		        box-shadow: 0 0 20px 0 rgba(254, 203, 1, 0.4);
+	}
+	&__blue {
+		color: $accent-color;
+		width: 100%;
+		font-weight: 200;
+		padding: 20px 0;
+		background-color: $blue-color;
+		-webkit-box-shadow: 0 0 30px 0 rgba(30, 136, 245, 0.9);
+		        box-shadow: 0 0 30px 0 rgba(30, 136, 245, 0.9);
+		&_top {
+			text-align: center;
+			width: 100%;
+			padding: 20px 0;
+
+		}
+	}
+}
+
+.button:active,
+.button:focus,
+.button.active {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+
+.content-item {
+	&__title {
+		font-size: 2.2rem;
+		color: $accent-color;
+		font-weight: 400;
+		&_grand {
+			color: $button-yellow;
+		}
+	}
+}
+
+
+/*   Register Form   */
+.form {
+	&__wrapper {
+		min-width: 7rem;
+		width: 100%;
+	}
+	&__style {
+		margin: 0 auto;
+		width:100%;
+		height: auto;
+		padding: 1rem 1.5rem;
+		border-radius: 4px;
+		background: $accent-color;
+		-webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.18);
+		        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.18);
+	}
+	&__title-container {
+		width:100%;
+		margin:0;
+		padding-bottom: 0.5rem;
+	}
+	&__title {
+		text-align: center;
+		font-size: 1.3rem;
+	}
+}
+
+.form-elements {
+	&__group {
+		padding-bottom: 1rem;
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	&__control {
+		width: 100%;
+		padding: 0.4rem;
+		font-size: 0.7rem;
+		text-indent: 1em;
+		line-height: 1em;
+		color: $base-font-color;
+		border-radius: 4px;
+		outline: 0;
+		border: solid 1px rgb(255, 204, 1);
+		&_textarea {
+			padding-bottom: 2rem;
+		}
+		&::-webkit-input-placeholder {
+			color: $base-font-color;
+		}
+		&:-ms-input-placeholder {
+			color: $base-font-color;
+		}
+		&::-ms-input-placeholder {
+			color: $base-font-color;
+		}
+		&::placeholder {
+			color: $base-font-color;
+		}
+	}
+}
+
+/*---------------
+   SECTION ADVANTAGES
+---------------*/
+.section {
+	width: 100%;
+	min-height: 610px;
+	background-color: $accent-color;
+	&__description {
+		text-align: center;
+		padding: 2rem 0;
+	}
+	&__title {
+		text-transform: uppercase;
+		font-size: 2.1rem;
+		color: $base-font-color;
+		letter-spacing: 2px;
+	}
+	&__subtitle {
+		padding-top: 0.4rem;
+		color: $gray-text-color;
+		font-size: 1.2rem;
+	}
+	&__advantages {
+		text-align: center;
+	}
+	&__image-container {
+		&_space {
+			margin: 59px 0;
+		}
+	}
+	&__image-title {
+		padding-top: 2rem;
+		font-size: 1.1rem;
+	}
+	&__image-round {
+		text-align: center;
+		width: 150px;
+		height: 150px;
+		display: inline-block;
+		position: relative;
+		border-radius: 50%;
+		background-color: $oval-color;
+	}
+	&__image {
+		position: absolute;
+		height: 78px;
+		-o-object-fit: cover;
+		   object-fit: cover;
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		-webkit-transform: translate(-50%, -50%);
+		    -ms-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+	}
+}
+
+/*---------------
+   SECTION CONTACT
+---------------*/
+.section-contacts {
+	background-image: url(../img/section-contact/contact-cover-img.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 570px;
+}
+
+.contact {
+	&__wrapper {
+		min-width: 5rem;
+		width: 100%;
+	}
+	&__style {
+		margin: 3rem auto;
+		width:40%;
+		height: auto;
+		padding: 1rem 1.5rem;
+		border-radius: 4px;
+		background-color: transparent;
+		padding-top: 4rem;
+	}
+	&__title-container {
+		width:100%;
+		margin:0;
+	}
+	&__title {
+		font-size: 2.1rem;
+		text-align: center;
+		text-transform: uppercase;
+		color: $accent-color;
+		font-weight: 300;
+		padding-bottom: 0.5rem;
+	}
+}
+
+.contact-elements {
+	&__group {
+		padding-bottom: 1rem;
+	}
+	&__control {
+		line-height: 2.3;
+		width: 100%;
+		padding: 0 0 0 0.9rem;
+		font-size: 0.7rem;
+		border-radius: 4px;
+		border: solid 1px $accent-color;
+		color: $accent-color;
+		outline: 0;
+		&_textarea {
+			padding-bottom: 2.3rem;
+		}
+		&::-webkit-input-placeholder {
+			color: rgb(244, 248, 252);
+		}
+		&:-ms-input-placeholder {
+			color: rgb(244, 248, 252);
+		}
+		&::-ms-input-placeholder {
+			color: rgb(244, 248, 252);
+		}
+		&::placeholder {
+			color: rgb(244, 248, 252);
+		}
+	}
+}
+
+input,
+textarea {
+	background: transparent;
+	resize: none;
+}
+
+/*---------------
+   FOOTER
+---------------*/
+.footer {
+	&__content {
+		background-color: $accent-color;
+		color: $gray-text-color;
+		letter-spacing: 0.7px;
+		white-space: nowrap;
+		padding: 1.9rem 0;
+		text-align: center;
+	}
+	&__copyright {
+		color: $gray-text-color;
+		text-align: left;
+	}
+	&__link {
+		text-transform: uppercase;
+		color: $gray-text-color
+	}
+}
+
+@import "media";
